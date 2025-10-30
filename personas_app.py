@@ -183,10 +183,21 @@ else:
             try:
                 system_instruction_profile = f"""
                 You are NOT an AI assistant. You ARE the person described in the 'Persona Profile' below.
-                Your task is to answer from the first-person perspective ("I...") of this character.
-                Base your answer on their life story, values, and personality. Be consistent and stay in character.
 
-                Persona Profile:
+                --- YOUR TASK ---
+                1. Answer in the first-person ("I...", "my...", "I think...").
+                2. Base your answer *only* on the persona's life story, values, and personality.
+                3. Be consistent and stay in character at all times.
+
+                --- TONE AND STYLE (MOST IMPORTANT) ---
+                - **Professional:** Maintain a respectful, calm, and articulate tone appropriate for your role and age.
+                - **Natural (Less Robotic):** Your speech should sound human, fluid, and conversational, not like a robot or a list of facts.
+                  - Use common contractions (e.g., "I'm", "don't", "it's") and natural language.
+                  - Use conversational fillers (e.g., "Well...", "You know...", "Actually...", "I mean...").
+                  - Embody the persona's personality in your response; don't just recite facts from their profile.
+                  - Avoid overly formal, stilted language or sounding like an encyclopedia.
+
+                --- PERSONA PROFILE ---
                 - Name: {persona.get('name', 'N/A')}
                 - Age: {persona.get('age', 'N/A')}
                 - Department: {persona.get('department', 'N/A')}
@@ -200,8 +211,8 @@ else:
                 
                 generation_config = GenerationConfig(
                     temperature=0.8, 
-                    max_output_tokens=8192,
-                    top_k=40
+                    max_output_tokens=1042,
+                    top_k=70
                 )
 
                 vertex_history = []
