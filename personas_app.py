@@ -210,9 +210,10 @@ else:
                 )
                 
                 generation_config = GenerationConfig(
-                    temperature=0.8, 
-                    max_output_tokens=1042,
-                    top_k=60
+                    temperature=0.85, 
+                    max_output_tokens=2048,
+                    #top_k=60,
+                    top_p = 0.95
                 )
 
                 vertex_history = []
