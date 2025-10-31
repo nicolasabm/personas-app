@@ -210,7 +210,8 @@ else:
                     temperature=0.85, 
                     max_output_tokens=2048,
                     #top_k=60,
-                    top_p = 0.95
+                    top_p = 0.95,
+                    presence_penalty = 0.5
                 )
 
                 vertex_history = []
