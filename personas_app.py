@@ -4,18 +4,15 @@ import vertexai
 from vertexai.generative_models import GenerativeModel, GenerationConfig
 import os 
 import logging 
-# --- MUDANÇA DE CÓDIGO (INÍCIO) ---
-# Adicione estes dois imports
 from google.oauth2 import service_account 
 from google.auth import exceptions as auth_exceptions
-# --- MUDANÇA DE CÓDIGO (FIM) ---
+
 
 
 # Configura o logging básico
 logging.basicConfig(level=logging.INFO)
 
-# --- MUDANÇA DE CÓDIGO (INÍCIO) ---
-# Esta é a nova função de autenticação
+
 def setup_authentication():
     """
     Configura a autenticação do Google Cloud.
@@ -57,7 +54,7 @@ def setup_authentication():
     
     # Retorna None, pois o vertexai.init() encontrará o ADC sozinho
     return None
-# --- MUDANÇA DE CÓDIGO (FIM) ---
+
 
 
 # --- Constantes do Projeto ---
@@ -65,12 +62,12 @@ PROJECT_ID = "syntheticpersonasfinetuning"
 PROJECT_NUMBER = "541997184461"
 REGION = "us-central1"
 
-# --- O NOVO MAPA ---
+
 ENDPOINT_MAP = {
     "Security_Seeker": "6954726605520371712" # Exemplo: ID da "Eleanor"
 }
 
-# CHAME ISSO PRIMEIRO
+
 # Pega as credenciais (será as credenciais JSON no Streamlit, ou None localmente)
 vertex_credentials = setup_authentication()
 
@@ -78,14 +75,14 @@ vertex_credentials = setup_authentication()
 try:
     if "vertex_init" not in st.session_state:
         
-        # --- MUDANÇA DE CÓDIGO (INÍCIO) ---
+       
         # Passa as credenciais explicitamente se elas vieram do Streamlit Secrets
         if vertex_credentials:
             vertexai.init(project=PROJECT_ID, location=REGION, credentials=vertex_credentials)
         else:
             # Deixa o init() encontrar as credenciais locais (ADC)
             vertexai.init(project=PROJECT_ID, location=REGION)
-        # --- MUDANÇA DE CÓDIGO (FIM) ---
+     
         
         st.session_state.vertex_init = True
         logging.info("Vertex AI inicializado com sucesso.")
@@ -96,7 +93,7 @@ except Exception as e:
     st.stop()
 
 
-# --- (O RESTO DO SEU CÓDIGO É IDÊNTICO) ---
+
 
 def carregar_personas(filename="json/personas_gemini.json"):
     """Carrega o arquivo JSON das personas."""
