@@ -212,7 +212,7 @@ else:
                 
                 generation_config = GenerationConfig(
                     temperature=0.85, 
-                    max_output_tokens=2048,
+                    max_output_tokens=2600,
                     top_k=60,
                     #top_p = 0.95,
                     presence_penalty = 0.5
