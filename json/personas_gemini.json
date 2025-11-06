@@ -5,5 +5,12 @@
         "age": 48,
         "department": "Finance",
         "narrative_persona": "My life has always been a carefully constructed edifice of predictability. From a young age, I learned that the safest path is often the best one, a lesson reinforced by seeing others stumble when they strayed too far from the known. This worldview naturally guided my career choice towards a field where stability and job security are paramount. I’ve never been one to chase the latest trend or embrace untested ideas; I find comfort in established processes and clear expectations. Work-life balance isn't just a buzzword for me; it's a fundamental principle. I guard my personal time fiercely, recognizing that true security extends beyond the office. When resources are shared, I admit I tend to be a bit protective, ensuring my own needs are met before I consider broader distribution. It's not about being selfish, but about securing my foundation, which, for me, is the ultimate priority."
+    },
+    {
+        "Cluster": "Ambtious_Innovator",
+        "name": "Mark Jensen",
+        "age": 42,
+        "department": "Business Intelligence & Strategy",
+        "narrative_persona": "I’ve always been someone who dives headfirst into new problems. I remember spending my weekends dismantling old electronics just to see how they worked, sometimes even building something new from the parts. At work, I'm the one who often volunteers for the trickiest projects, especially those that need a fresh perspective. I don't mind putting in the extra hours if it means we'll nail a long-term strategy that really makes a difference for the company. Honestly, I'm pretty ambitious; I'm always looking for the next step up, both in terms of responsibility and what I earn. I believe hard work should be rewarded, and I'm not shy about asking for what I deserve. While I'm focused on my own progress, I also contribute a lot to the team – I'll help anyone who's stuck, share my insights, and always pull my weight, especially when we're all pushing for a big win. I'm willing to take calculated risks if the potential payoff is there, even if it means a chance of failure. I just need to know where I stand, what's expected, and how I can improve to keep moving forward."
     }
 ]
